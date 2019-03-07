@@ -1,0 +1,172 @@
+header {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  height: 10%;
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    .logo {
+      margin-right: 5rem;
+      width: 20%;
+      cursor: pointer;
+      svg {
+        height: 80%;
+        path {
+          transition: fill 1s;
+        }
+        #fill-22,
+        #fill-8 {
+          transition: fill 1s;
+        }
+      }
+    }
+    .menu {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      .menu-item,
+      .menu-item-contact {
+        margin: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        padding-bottom: 0.5rem;
+        position: relative;
+        @include ease-In-Out(0.3s);
+      }
+
+      .menu-item::before,
+      .menu-item-contact::before,
+      .active_btn_slide::before {
+        content: "";
+        width: 0;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+        @include ease-In-Out(0.3s);
+      }
+
+      .menu-item:hover::before,
+      .menu-item-contact:hover::before,
+      .active_btn_slide::before {
+        width: 100%;
+      }
+
+      .active-footer::before {
+        background-color: $secondary-blue;
+      }
+
+      .active-footer-normal::before {
+        background-color: $primary-blue;
+      }
+    }
+
+    .contact {
+      transition: all 0.5s;
+    }
+    .donate {
+      margin-left: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      width: 9rem !important;
+      height: 3rem !important;
+      border-bottom: 0 !important;
+      cursor: pointer;
+      transition: color 1s;
+      .join_btn {
+        font-size: 1.2rem !important;
+      }
+    }
+
+    .menu-btn {
+      z-index: 6;
+      top: 2.5rem;
+      cursor: pointer;
+      transition: all 0.5s ease-out;
+      align-self: center;
+      display: none;
+
+      .btn-line {
+        width: 28px;
+        height: 2px;
+        margin: 0 0 5px 0;
+        background: white;
+        transition: all 0.5s ease-out;
+      }
+
+      // Rotate Into X With Menu Lines
+      &.close {
+        transform: rotate(180deg);
+
+        .btn-line {
+          // Line 1 - Rotate
+          &:nth-child(1) {
+            transform: rotate(45deg) translate(4px, 3px);
+          }
+
+          // Line 2 - Hide
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          // Line 3 - Rotate
+          &:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    background: $primary-blue;
+    transform: translateY(-130%);
+    position: relative;
+    z-index: -1;
+    transition: transform 0.5s ease-in-out;
+
+    .nav-items-mobile {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 55vh;
+
+      .menu-item, .menu-item-contact{
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:hover{
+          color: $secondary-blue;
+        }
+      }
+
+      .donate{
+        height: 10% !important;
+        width: 10rem !important;
+        .join_btn{
+          p{
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .active {
+    color: $secondary-blue !important;
+  }
+  .appear {
+    transform: translateY(-1%);
+  }
+}

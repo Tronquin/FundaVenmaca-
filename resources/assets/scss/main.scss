@@ -1,0 +1,767 @@
+@import "config";
+@import "menu";
+@import "footer";
+@import "responsive";
+
+/*globals styles*/
+/*avoid on mobile view every blue highlight when tap on something*/
+* {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none !important;
+}
+
+div,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: "Montserrat";
+  margin: 0;
+  overflow: hidden;
+  font-size: 15px;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.white-highlight {
+  color: white;
+}
+
+.highlight-blue {
+  color: $secondary-blue;
+}
+
+.highlight-light-blue {
+  color: $primary-blue;
+}
+
+.join_btn_wrapper {
+  display: inline-block; /*most important part*/
+  border-radius: 50px;
+  height: 7%;
+  width: 16rem;
+  text-align: center;
+  transition: margin 0.3s;
+  background-clip: content-box;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    .join_btn {
+      color: white;
+    }
+  }
+}
+
+.join_btn_wrapper::before {
+  border-radius: 50px;
+  height: 110%;
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  -webkit-transform: translateX(-110%);
+  transform: translateX(-110%);
+  width: 110%;
+  z-index: 1;
+  background-color: $secondary-blue;
+  @include ease-In-Out(0.5s);
+}
+
+.join_btn_wrapper:hover::before {
+  transform: translateX(0);
+}
+
+.join_btn {
+  text-decoration: none;
+  color: $secondary-blue;
+  background: white;
+  position: relative;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+
+  p {
+    margin: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 15px;
+      height: 15px;
+      margin-left: 0.8rem;
+    }
+  }
+}
+
+main {
+  div {
+    display: flex;
+  }
+}
+
+.swiper-wrapper {
+  height: inherit;
+}
+
+.main_slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  top: 0;
+
+  .btn-left,
+  .btn-right {
+    width: 15%;
+    position: fixed;
+    display: inline-block !important;
+    background: transparent;
+    font-size: 2.6rem;
+    text-align: center;
+    top: 47%;
+    svg {
+      cursor: pointer;
+      color: $secondary-blue;
+      opacity: 0.5;
+      @include ease-In-Out(0.3s);
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .btn-right {
+    right: 0 !important;
+  }
+
+  .btn-left {
+    left: 0 !important;
+  }
+
+  div:focus {
+    outline: 0;
+  }
+
+  .s1 {
+    background: url(../../../public/img/backgrounds/images_web/img_slider_venmaca_1.jpg)
+      no-repeat;
+    background-size: cover;
+    background-position: center top;
+    .join_btn_wrapper {
+      margin-top: 1rem;
+    }
+    .txt-wrap {
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 15rem;
+      .tagline {
+        font-size: 4rem;
+      }
+
+      p {
+        color: $secondary-blue;
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .know-us{
+        margin-top: 1.5rem;
+        .join_btn{
+          p{
+            transition: all 0.5s ease;
+          }
+        }
+        &:hover {
+          .join_btn {
+            p {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .s2 {
+    justify-content: center;
+    align-items: center;
+    background: rgba($color: #000000, $alpha: 0.3);
+
+    a {
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.8s ease-in-out;
+      width: 25%;
+      height: 100%;
+      div {
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s;
+      }
+      &:hover {
+        width: 40%;
+      }
+    }
+    .sec-1 {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../../../public/img/backgrounds/images_web/img_vision.jpeg)
+          no-repeat;
+      background-size: cover;
+      background-position: -20rem center;
+    }
+
+    .sec-2 {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../../../public/img/backgrounds/images_web/img_mision.jpg) no-repeat;
+      background-size: cover;
+      background-position: 65% center;
+    }
+
+    .sec-3 {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../../../public/img/backgrounds/images_web/img_obejtivo.jpeg)
+          no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .sec-4 {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../../../public/img/backgrounds/images_web/img_lo_que_hacemos.jpg)
+          no-repeat;
+      background-size: cover;
+      background-position: -25rem center;
+    }
+
+    .text-center {
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      width: 100% !important;
+      height: 100% !important;
+      h3 {
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0;
+        .white-highlight {
+          font-size: 2.5rem;
+        }
+      }
+      .underline {
+        width: 0 !important;
+        height: 3px !important;
+        background-color: white;
+        margin-top: 0.5rem;
+        @include ease-In-Out(0.3s);
+      }
+
+      &:hover {
+        .underline {
+          width: 6rem !important;
+        }
+      }
+    }
+  }
+
+  .s3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../../../public/img/backgrounds/images_web/img_unete.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    .join {
+      display: flex;
+      flex-flow: column wrap;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      .tittle {
+        font-size: 2.5rem;
+        color: white;
+        text-align: center;
+        font-weight: lighter;
+        margin-bottom: 3rem;
+        .white-highlight {
+          font-size: 3.5rem;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
+
+/* styles for modificate the fancy-box */
+.fancybox-slide--html {
+  padding: 0 !important;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  color: $secondary-blue !important;
+  padding: 0.2rem !important;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50px;
+  border: 2px solid $secondary-blue;
+  margin: 1.3rem 7rem auto auto;
+  transition: all 0.5s ease-in-out;
+  @include ease-In-Out(0.5s);
+  &:hover {
+    color: white !important;
+    background: $secondary-blue;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#vision,
+#mision,
+#objective,
+#we_do {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Styles for the mision, vision, objetivo and hacemos pages in the  Nosotros folder*/
+.nosotros-container {
+  display: unset !important;
+  footer {
+    height: unset;
+  }
+}
+
+.return_bar {
+  height: 10%;
+  width: 100%;
+  border-bottom: 2px solid $primary-blue;
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    li {
+      display: flex;
+    }
+
+    .highlight-blue {
+      font-weight: bolder;
+      font-size: 2rem;
+    }
+  }
+}
+
+.main_content {
+  display: grid !important;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  height: 90%;
+
+  .description_image {
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  .vision {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../../../public/img/backgrounds/images_web/img_mision.jpg) no-repeat;
+  }
+
+  .objective {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../../../public/img/backgrounds/images_web/img_obejtivo.jpeg)
+        no-repeat;
+  }
+
+  .mision {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../../../public/img/backgrounds/images_web/img_vision.jpeg) no-repeat;
+  }
+
+  .description {
+    flex-flow: column wrap;
+    color: $secondary-blue;
+    box-sizing: border-box;
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 6rem;
+    text-align: justify;
+    h3 {
+      color: $primary-blue;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      span {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      margin-right: 8rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.main_content_hacemos {
+  display: grid !important;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 35% 35% 35%;
+  width: 100%;
+  height: 86%;
+  .ev1 {
+    background: url(../../../public/img/backgrounds/images_web/img_mision.jpg);
+  }
+
+  .ev2 {
+    background: url(../../../public/img/backgrounds/images_web/img_vision.jpeg);
+  }
+
+  .ev3 {
+    background: url(../../../public/img/backgrounds/images_web/img_obejtivo.jpeg);
+    color: $secondary-blue;
+  }
+
+  .ev4 {
+    background: url(../../../public/img/backgrounds/images_web/img_contacto.jpg);
+  }
+
+  .ev5 {
+    background: url(../../../public/img/backgrounds/images_web/img_lo_que_hacemos.jpg);
+  }
+
+  .ev6 {
+    background: url(../../../public/img/backgrounds/images_web/img_formulario.jpg);
+    color: $secondary-blue;
+  }
+
+  .ev1,
+  .ev3,
+  .ev5 {
+    justify-content: flex-end;
+  }
+
+  .evento {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center center;
+    z-index: 20;
+    padding: 3rem;
+    position: relative;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+    .txt-wrap {
+      z-index: 10;
+      width: 70%;
+      height: auto;
+      transition: all 0.5s ease;
+      flex-flow: column wrap;
+      align-self: center;
+      text-align: justify;
+      .highlight-blue {
+        color: $secondary-blue;
+        transition: all 0.5s ease;
+      }
+
+      .highlight-white {
+        color: white;
+        transition: all 0.5s ease;
+      }
+
+      p {
+        line-height: 20px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .evento:hover::after,
+  .evento:hover::before {
+    transform: translateX(0);
+  }
+
+  .evento::before,
+  .evento::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .evento::before {
+    z-index: 1;
+    width: 100%;
+  }
+
+  .ev1::before,
+  .ev4::before {
+    background-color: $secondary-blue;
+  }
+
+  .ev2::before,
+  .ev5::before {
+    background-color: $primary-blue;
+  }
+
+  .ev3::before,
+  .ev6::before {
+    background-color: $complementary-blue;
+  }
+
+  .evento::after {
+    z-index: 2;
+    width: 0;
+    background-color: rgba(28, 32, 32, 0.7);
+  }
+
+  .evento:hover::after {
+    width: 100%;
+  }
+
+  .evento:hover .txt-wrap {
+    color: #fff;
+  }
+
+  .evento:hover .txt-wrap h3 .highlight-white,
+  .evento:hover .txt-wrap h3 .highlight-blue {
+    color: $primary-blue;
+  }
+
+  .evento:hover::before {
+    transform: translateX(100%);
+  }
+}
+#donate {
+  background: linear-gradient(
+      rgba(238, 235, 235, 0.7),
+      rgba(238, 235, 235, 0.7)
+    ),
+    url(../../../public/img/backgrounds/images_web/img_contacto.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  .donate-container {
+    display: flex !important;
+    flex-flow: column wrap;
+    height: 100%;
+    .return_bar {
+      height: 10%;
+      border: none;
+      ul {
+        justify-content: flex-start;
+        padding-left: 2rem;
+      }
+    }
+    .data_container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      h3,
+      p,
+      div {
+        margin-bottom: 1.5rem;
+      }
+
+      .contact_media_icon {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      .contact_circle_icon {
+        width: 100%;
+      }
+    }
+    div {
+      height: auto;
+    }
+  }
+}
+
+#join {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  .form_container {
+    display: grid !important;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    width: 100vw;
+    height: 100vh;
+
+    .img_form {
+      background: url(../../../public/img/backgrounds/images_web/img_formulario.jpg)
+        no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .email-form {
+      background: $footer-background;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+        width: 70%;
+        li {
+          margin-top: 1rem;
+          text-align: center;
+          h3 {
+            font-size: 1rem;
+            font-weight: lighter;
+          }
+
+          h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .return_bar {
+        border: none;
+        justify-content: flex-end;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        ul {
+          width: auto;
+        }
+      }
+
+      .double-field {
+        display: grid !important;
+        grid-template-columns: 49% 2% 49%;
+        grid-template-rows: 1fr;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: $secondary-grey;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      input[type="datetime"],
+      input[type="number"],
+      input[type="search"],
+      input[type="time"],
+      input[type="url"],
+      input[type="email"],
+      textarea,
+      select {
+        outline: none;
+        resize: none;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        padding: 1rem;
+        background: white;
+        color: $primary-grey;
+        margin-top: 0.3rem;
+        margin-bottom: 0.5rem;
+        border-radius: 50px;
+        border: none;
+        width: 100%;
+      }
+
+      select {
+        color: $secondary-blue;
+        border: 1px solid $secondary-blue;
+        width: 10rem;
+        background: url(../../../public/img/icons/navigation/down-arrow.svg)
+          no-repeat 90% transparent;
+        background-size: 0.8rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: "";
+        margin-left: 2rem;
+        padding: 0.8rem;
+        background-color: white;
+      }
+
+      .li-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .field-long {
+        width: -webkit-fill-available;
+      }
+      .field-select {
+        width: -webkit-fill-available;
+      }
+
+      .join_btn_wrapper {
+        height: 3rem !important;
+        width: 10rem !important;
+        .join_btn {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  div {
+    height: unset;
+  }
+}
+
+/* setting fancybox bacground to transparent and other changes to fancybox */
+.fancybox-bg {
+  background: transparent !important;
+}

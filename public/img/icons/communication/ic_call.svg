@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Communication/ic_call</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6.62,10.79 C8.06,13.62 10.38,15.93 13.21,17.38 L15.41,15.18 C15.68,14.91 16.08,14.82 16.43,14.94 C17.55,15.31 18.76,15.51 20,15.51 C20.55,15.51 21,15.96 21,16.51 L21,20 C21,20.55 20.55,21 20,21 C10.61,21 3,13.39 3,4 C3,3.45 3.45,3 4,3 L7.5,3 C8.05,3 8.5,3.45 8.5,4 C8.5,5.25 8.7,6.45 9.07,7.57 C9.18,7.92 9.1,8.31 8.82,8.59 L6.62,10.79 L6.62,10.79 Z" id="path-1"></path>
+    </defs>
+    <g id="Communication/ic_call" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Bounds" points="0 0 24 0 24 24 0 24"></polygon>
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+        <g id="Color-/-Color-01" mask="url(#mask-2)" fill="#000000">
+            <rect id="color" x="0" y="0" width="24" height="24"></rect>
+        </g>
+        <g id="color/@azul/dark" mask="url(#mask-2)">
+            <g transform="translate(-3.000000, -3.000000)">
+                <rect id="Background" fill="none" x="0" y="0" width="29" height="29"></rect>
+                <rect id="Rectangle-Copy-2" fill="#0088BA" fill-rule="evenodd" x="0" y="0" width="29" height="29"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

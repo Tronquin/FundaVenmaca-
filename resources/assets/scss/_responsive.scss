@@ -1,0 +1,395 @@
+/*Medium Devices*/
+@include medium-dev {
+  header {
+    position: relative !important;
+    nav {
+      justify-content: space-around !important;
+      margin-top: 0 !important;
+      height: 100%;
+      background: $primary-blue;
+
+      .logo {
+        .logo-circle,
+        .logo-body,
+        .logo-head,
+        .logo-text {
+          fill: white !important;
+        }
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .donate {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+  }
+
+  .join_btn_wrapper {
+    height: 6% !important;
+    width: 10rem !important;
+    .join_btn {
+      font-size: 1rem !important;
+      p {
+        font-size: 1rem !important;
+      }
+    }
+  }
+
+  main {
+    .s1 {
+      .txt-wrap {
+        padding-right: 0 !important;
+        text-align: center;
+        .tagline {
+          margin-top: -5rem;
+        }
+      }
+    }
+
+    .s2 {
+      flex-flow: column wrap;
+      justify-content: flex-start !important;
+      a {
+        width: 100% !important;
+        height: 21.55% !important;
+      }
+
+      .sec-1,
+      .sec-2,
+      .sec-4 {
+        background-position: center center !important;
+      }
+    }
+  }
+
+  footer {
+    .contact {
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .footer_bottom {
+        justify-content: center !important;
+        .social_media {
+          display: none;
+        }
+      }
+
+      .contact_description {
+        align-items: center;
+        width: 100%;
+        figure {
+          img {
+            display: none;
+          }
+
+          figcaption {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+
+      .info_contact {
+        width: 100%;
+        .contact_us {
+          width: 100%;
+          align-items: center;
+          .contact_us_tittle,
+          .contact_us_item {
+            margin-left: 0 !important;
+            margin-bottom: 0.5rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  .fancybox-slide--html .fancybox-close-small {
+    margin: 1.5rem !important;
+  }
+
+  .main_content_hacemos {
+    .evento {
+      padding: 1rem !important;
+      .txt-wrap {
+        width: 100% !important;
+        font-size: 0.8rem;
+        p {
+          line-height: normal !important;
+          font-size: 0.7rem !important;
+        }
+      }
+    }
+  }
+
+  .main_content {
+    .description {
+      padding: 3rem !important;
+      h3 {
+        font-size: 1rem !important;
+        span {
+          font-size: 2rem !important;
+        }
+      }
+
+      p {
+        margin-right: 0 !important;
+        font-size: 0.8rem !important;
+      }
+    }
+  }
+
+  #join {
+    .li-center {
+      flex-flow: column wrap;
+      select {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+
+@include medium-dev-Landscape {
+  body,
+  html {
+    font-size: 8px;
+  }
+
+  .fancybox-slide--html .fancybox-close-small {
+    margin: 0.3rem 7rem auto auto !important;
+  }
+
+  header {
+    position: relative !important;
+    nav {
+      justify-content: space-around !important;
+      margin-top: 0 !important;
+      height: 100%;
+      background: $primary-blue;
+
+      .logo {
+        .logo-circle,
+        .logo-body,
+        .logo-head,
+        .logo-text {
+          fill: white !important;
+        }
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .donate {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+  }
+
+  .join_btn_wrapper {
+    height: 6% !important;
+    width: 10rem !important;
+    .join_btn {
+      font-size: 1rem !important;
+      p {
+        font-size: 1rem !important;
+      }
+    }
+  }
+}
+
+/*Small Devices*/
+@include small-dev {
+  footer .footer .copyright p,
+  footer .footer_bottom .copyright p {
+    font-size: 0.5rem !important;
+  }
+
+  footer .footer .social_media .media-icons li a,
+  footer .footer_bottom .social_media .media-icons li a {
+    font-size: 1rem !important;
+  }
+
+  header {
+    .mobile-menu {
+      .nav-items-mobile {
+        .menu-item,
+        .menu-item-contact {
+          font-size: 1rem !important;
+        }
+
+        .donate {
+          .join_btn {
+            p {
+              font-size: 1rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    margin-right: 8rem !important;
+    width: 35% !important;
+    svg {
+      width: 100%;
+    }
+  }
+
+  .contact_us_tittle,
+  .media-info,
+  figcaption,
+  .figurecaption_tittle {
+    font-size: 1rem !important;
+  }
+
+  .contact_media_icon {
+    padding: 0.8rem !important;
+  }
+
+  #join {
+    .form_container {
+      grid-template-columns: 100% !important;
+      .img_form {
+        display: none !important;
+      }
+    }
+  }
+
+  .main_content {
+    grid-template-columns: 100% !important;
+    .description_image {
+      width: 100vw;
+    }
+    .description {
+      align-items: center !important;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(238, 235, 235, 0.7);
+      h3 {
+        font-size: 1rem !important;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1rem !important;
+      }
+    }
+  }
+
+  .main_content_hacemos {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 15% 15% 15% 15% 15% 15% !important;
+    height: 100% !important;
+    .evento {
+      .txt-wrap {
+        p {
+          font-size: 0.6rem !important;
+        }
+      }
+    }
+  }
+
+  .return_bar {
+    ul {
+      .highlight-blue {
+        font-size: 1.5rem !important;
+      }
+    }
+  }
+
+  .fancybox-slide--html .fancybox-close-small {
+    margin: 1rem !important;
+  }
+
+  .join_btn_wrapper {
+    width: 10rem !important;
+  }
+}
+
+@include small-dev-Landscape {
+  body,
+  html {
+    font-size: 8px;
+  }
+
+  .fancybox-slide--html .fancybox-close-small {
+    margin: 0.3rem 7rem auto auto !important;
+  }
+
+  header {
+    position: relative !important;
+    nav {
+      justify-content: space-around !important;
+      margin-top: 0 !important;
+      height: 100%;
+      background: $primary-blue;
+
+      .logo {
+        .logo-circle,
+        .logo-body,
+        .logo-head,
+        .logo-text {
+          fill: white !important;
+        }
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .donate {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+  }
+
+  .join_btn_wrapper {
+    height: 6% !important;
+    width: 10rem !important;
+    .join_btn {
+      font-size: 1rem !important;
+      p {
+        font-size: 1rem !important;
+      }
+    }
+  }
+}
+
+/*Extra small Devices*/
+@include exSmall-dev {
+  * {
+    font-size: 0.8rem !important;
+  }
+
+  h3,
+  span {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+@include exSmall-dev-Landscape {
+}

@@ -1,0 +1,65 @@
+/*Colors*/
+$primary-blue: #00B9E3;
+$secondary-blue: #0077A7;
+$complementary-blue: #C7E8F0;
+$primary-grey: #9B9B9B;
+$secondary-grey: #CFCFCF;
+$footer-background: #F6F6F6;
+
+/*font-faces*/
+@font-face{
+    font-family: 'Montserrat';
+    src: url("../../../public/fonts/Montserrat.ttf") format('truetype');
+}
+
+/*Mixins*/
+@mixin ease-In-Out($time: 0.5s , $type: ease-in-out) {
+    transition: all $time $type;
+}
+
+@function small-dev-media($opacity){
+    @if ($opacity == 0){
+        @return 1;
+    }
+}
+
+/*media-queries*/
+
+//Medium Devices
+@mixin medium-dev{
+    @media screen and (max-width: 800px) and (orientation: portrait) {
+        @content;
+    }
+}
+  
+@mixin medium-dev-Landscape {
+    @media screen and (max-width: 800px) and (orientation: landscape) {
+        @content;
+    }
+}
+  
+//Small Devices
+@mixin small-dev {
+    @media screen and (max-width: 500px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin small-dev-Landscape {
+    @media screen and (max-width: 500px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+//Extra-small Devices
+@mixin exSmall-dev {
+    @media screen and (max-width: 350px) and (orientation: portrait) {
+        @content;
+    }
+}
+  
+@mixin exSmall-dev-Landscape {
+    @media screen and (max-width: 350px) and (orientation: landscape) {
+        @content;
+    }
+}

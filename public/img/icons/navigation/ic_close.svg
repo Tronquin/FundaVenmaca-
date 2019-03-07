@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Navigation/ic_close</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="26.9166667 9.08083333 24.9191667 7.08333333 17 15.0025 9.08083333 7.08333333 7.08333333 9.08083333 15.0025 17 7.08333333 24.9191667 9.08083333 26.9166667 17 18.9975 24.9191667 26.9166667 26.9166667 24.9191667 18.9975 17"></polygon>
+    </defs>
+    <g id="Navigation/ic_close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation/ic_close-1">
+            <polygon id="Bounds" points="0 0 34 0 34 34 0 34"></polygon>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+            <g id="color/@azul_dark" mask="url(#mask-2)" fill="#0077A7">
+                <rect x="0" y="0" width="34" height="34"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+{
+  "name": "fundacion_venmaca",
+  "version": "1.0.0",
+  "description": "Fundación VENMACA",
+  "scripts": {
+    "sass-juan": "sass resources/assets/scss/main.scss public/css/main.css",
+    "build": "node_modules/.bin/webpack",
+    "sass-w": "sass --watch resources/assets/scss/main.scss public/css/main.css",
+    "sass-min": "sass --style compressed resources/assets/scss/main.scss public/css/main.css",
+    "sass-min-w": "sass --watch --style compressed resources/assets/scss/main.scss public/css/main.css",
+    "sass": "node-sass -w resources/assets/scss/ -o public/css/ --recursive"
+  },
+  "keywords": [],
+  "author": "Juan Soto / Jv18",
+  "license": "MIT",
+  "devDependencies": {
+    "jquery": "^3.3.1",
+    "node-sass": "^4.9.4"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.2",
+    "@webpack-cli/init": "^0.1.2",
+    "gsap": "^2.0.2",
+    "sass": "^1.14.3",
+    "swiper": "^4.4.2"
+  }
+}

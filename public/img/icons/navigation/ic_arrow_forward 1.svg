@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Navigation/ic_arrow_forward 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="15.2173913 4.66666667 13.4293478 6.31166667 20.5054348 12.8333333 5.07246377 12.8333333 5.07246377 15.1666667 20.5054348 15.1666667 13.4293478 21.6883333 15.2173913 23.3333333 25.3623188 14"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation/ic_arrow_forward" transform="translate(-5.000000, -4.000000)">
+            <g id="Navigation/ic_arrow_forward-1">
+                <polygon id="Bounds" points="0 0 30.4347826 0 30.4347826 28 0 28"></polygon>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+                <g id="color/@azul_light" mask="url(#mask-2)" fill="#00B9E3">
+                    <rect x="0" y="0" width="30" height="28"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
